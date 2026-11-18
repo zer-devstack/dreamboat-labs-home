@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The SaaS Owner's AI Scorecard | Dreamboat Labs</title>
+<meta name="description" content="Answer 10 quick yes/no questions to see where your SaaS product stands, where AI could help, and what to fix first.">
+<meta property="og:title" content="The SaaS Owner's AI Scorecard">
+<meta property="og:description" content="10 yes/no questions. 2 minutes. See where your product stands and where AI could help.">
+<meta property="og:image" content="https://dreamboat-labs.com/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F1F6FB;font-family:Poppins,system-ui,sans-serif;color:#0F172A}
+a{color:#0058A3}a:hover{color:#00478A}
+.dots{background-color:#F1F6FB;background-image:radial-gradient(#BFD5EC 1.2px,transparent 1.2px);background-size:22px 22px}
+.card{width:100%;background:#fff;border:1px solid #DCE7F2;border-radius:24px;box-shadow:0 30px 60px -36px rgba(0,66,122,.45);box-sizing:border-box}
+.btn{background:#0058A3;color:#fff;border:0;font-family:Poppins,sans-serif;font-size:17px;font-weight:600;padding:18px 30px;border-radius:999px;min-height:56px;display:inline-flex;align-items:center;justify-content:center;gap:10px;cursor:pointer;transition:background-color .2s,transform .2s,box-shadow .2s}
+.btn:hover{background:#00478A;transform:translateY(-2px);box-shadow:0 12px 22px -10px rgba(0,88,163,.55)}
+.btn:disabled{opacity:.7;cursor:wait;transform:none}
+.ans{flex:1 1 220px;background:#fff;border:2px solid #DCE7F2;border-radius:16px;padding:22px;min-height:72px;font-family:Poppins,sans-serif;font-size:19px;font-weight:600;color:#0F172A;display:flex;align-items:center;justify-content:center;gap:10px;cursor:pointer;transition:background-color .15s,border-color .15s,transform .15s}
+.ans:hover{border-color:#0058A3;background:#F1F6FB;transform:translateY(-2px)}
+.ghost{align-self:flex-start;background:none;border:0;padding:8px 0;min-height:44px;font-family:Poppins,sans-serif;font-size:15px;color:#475569;cursor:pointer}
+.field{font-family:Poppins,sans-serif;font-size:16px;padding:14px 16px;border:1px solid #CBD5E1;border-radius:12px;min-height:48px;box-sizing:border-box;width:100%}
+.field:focus{outline:3px solid #BFD5EC;border-color:#0058A3}
+label{font-size:14px;font-weight:600}
+h1,h2,h3{font-family:Inter,sans-serif;font-weight:800;letter-spacing:-.02em;margin:0}
+.hidden{display:none !important}
+.mark{background:linear-gradient(transparent 58%,#FFD23F 58%);padding:0 4px}
+.tick{flex:0 0 auto;margin-top:2px}
+@keyframes pop{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:no-preference){.pop{animation:pop .45s ease-out both}}
+@media (max-width:560px){.card{padding:28px 22px !important}h1{font-size:34px !important}#q-text{font-size:24px !important}}
+</style>
+</head>
+<body>
+<div class="dots" style="min-height:100vh;display:flex;flex-direction:column">
+
+<header style="background:rgba(255,255,255,.92);border-bottom:1px solid #E2E8F0">
+<div style="max-width:1100px;margin:0 auto;padding:16px 24px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between">
+<a href="index.html" style="font-family:Inter,sans-serif;font-weight:800;font-size:21px;letter-spacing:-.02em;color:#0F172A;text-decoration:none;min-height:44px;display:inline-flex;align-items:center">Dreamboat Labs</a>
+<a href="index.html" style="color:#334155;text-decoration:none;font-size:15px;min-height:44px;display:inline-flex;align-items:center">← Back to home</a>
+</div>
+</header>
+
+<main style="flex:1 1 auto;display:flex;align-items:center;justify-content:center;padding:56px 20px 72px">
+
+<section id="intro" class="card pop" style="max-width:760px;padding:48px 44px;display:flex;flex-direction:column;gap:22px;align-items:flex-start">
+<span style="font-size:13px;font-weight:600;color:#0058A3;background:#E6EFF8;padding:8px 14px;border-radius:999px">Free · 2 minutes · Instant result</span>
+<h1 style="font-size:44px;line-height:1.08">The SaaS Owner's <span class="mark">AI Scorecard</span></h1>
+<p style="margin:0;font-size:18px;line-height:1.6;color:#334155">Answer 10 quick yes/no questions to see where your product stands, where AI could help, and what to fix first.</p>
+<ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px;font-size:16px">
+<li style="display:flex;gap:12px"><svg class="tick" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0058A3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Your readiness score, out of 100%</li>
+<li style="display:flex;gap:12px"><svg class="tick" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0058A3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>The areas worth fixing first, in plain English</li>
+<li style="display:flex;gap:12px"><svg class="tick" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0058A3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Simple next steps, including where AI fits</li>
+</ul>
+<button class="btn" type="button" id="start">Start the scorecard →</button>
+<p style="margin:0;font-size:13px;color:#475569">Made for non-technical SaaS owners in Australia and New Zealand.</p>
+</section>
+
+<section id="question" class="card hidden" style="max-width:760px;padding:40px 44px 44px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;justify-content:space-between;font-size:14px;color:#475569"><span id="q-progress" style="font-weight:600;color:#0058A3"></span><span id="q-cat"></span></div>
+<div style="height:8px;border-radius:999px;background:#E6EFF8;overflow:hidden"><div id="q-bar" style="height:8px;border-radius:999px;background:#0058A3;transition:width .35s;width:10%"></div></div>
+</div>
+<h2 id="q-text" style="font-size:32px;line-height:1.25" aria-live="polite"></h2>
+<div style="display:flex;flex-wrap:wrap;gap:14px">
+<button class="ans" type="button" id="yes"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Yes</button>
+<button class="ans" type="button" id="no"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>No</button>
+</div>
+<button class="ghost" type="button" id="q-back">← Back</button>
+</section>
+
+<section id="details" class="card hidden pop" style="max-width:620px;padding:44px;display:flex;flex-direction:column;gap:20px">
+<h2 style="font-size:34px;line-height:1.15">Your results are ready</h2>
+<p style="margin:0;font-size:16px;line-height:1.6;color:#475569">Tell us where to send a copy, and we'll show your score straight away.</p>
+<div style="display:flex;flex-direction:column;gap:6px"><label for="f-name">First name</label><input class="field" id="f-name" type="text" autocomplete="given-name"></div>
+<div style="display:flex;flex-direction:column;gap:6px"><label for="f-email">Work email</label><input class="field" id="f-email" type="email" autocomplete="email"></div>
+<div style="display:flex;flex-direction:column;gap:6px"><label for="f-company">Product or company name</label><input class="field" id="f-company" type="text" autocomplete="organization"></div>
+<input type="text" id="f-website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px">
+<p id="f-error" role="alert" class="hidden" style="margin:0;font-size:14px;color:#B91C1C"></p>
+<button class="btn" type="button" id="submit">See my results</button>
+<p style="margin:0;font-size:13px;line-height:1.5;color:#475569">We'll email you a copy of your results. No spam, and you can reply "stop" anytime. See our <a href="privacy.html">privacy policy</a>.</p>
+<button class="ghost" type="button" id="d-back">← Back</button>
+</section>
+
+<section id="result" class="hidden pop" style="width:100%;max-width:860px;display:flex;flex-direction:column;gap:20px">
+<div class="card" style="padding:44px;display:flex;flex-wrap:wrap;gap:36px;align-items:center">
+<div id="dial" style="flex:0 0 auto;width:180px;height:180px;border-radius:50%;display:flex;align-items:center;justify-content:center">
+<div style="width:142px;height:142px;border-radius:50%;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center">
+<span id="r-score" style="font-family:Inter,sans-serif;font-weight:800;font-size:44px;letter-spacing:-.03em"></span>
+<span style="font-size:13px;color:#475569">readiness</span>
+</div></div>
+<div style="flex:1 1 360px;display:flex;flex-direction:column;gap:12px">
+<span id="r-band" style="align-self:flex-start;font-size:13px;font-weight:700;padding:6px 12px;border-radius:999px"></span>
+<h2 id="r-greeting" style="font-size:32px;line-height:1.15"></h2>
+<p id="r-message" style="margin:0;font-size:16px;line-height:1.6;color:#475569"></p>
+</div></div>
+
+<div style="background:#FFFBEA;border:1px solid #F5E3A3;border-radius:24px;padding:36px 40px;display:flex;flex-direction:column;gap:12px">
+<h3 style="font-size:24px">Your summary</h3>
+<div id="r-summary"></div>
+</div>
+
+<div class="card" style="padding:36px 40px;display:flex;flex-direction:column;gap:18px;box-shadow:none">
+<h3 style="font-size:24px">Where to focus first</h3>
+<div id="r-focus" style="display:flex;flex-wrap:wrap;gap:14px"></div>
+</div>
+
+<div style="background:#00427A;color:#fff;border-radius:24px;padding:36px 40px;display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between">
+<div style="flex:1 1 380px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:24px">Want a second opinion on your results?</h3>
+<p style="margin:0;font-size:15px;line-height:1.6;color:#DDEAF6">Reply to your results email, or message Zer directly. We'll suggest where to start.</p>
+</div>
+<a href="mailto:zer@dreamboat-labs.com?subject=My%20AI%20Scorecard%20results" style="background:#FFD23F;color:#0F172A;text-decoration:none;font-size:16px;font-weight:700;padding:16px 26px;border-radius:999px;min-height:54px;box-sizing:border-box;display:inline-flex;align-items:center">Talk to Zer</a>
+</div>
+
+<div style="display:flex;flex-wrap:wrap;gap:18px;justify-content:center">
+<button class="ghost" type="button" id="restart" style="color:#0058A3;font-weight:600;align-self:center">Retake the scorecard</button>
+<a href="index.html" style="font-size:15px;font-weight:600;min-height:44px;display:inline-flex;align-items:center;text-decoration:none">Back to home</a>
+</div>
+</section>
+
+</main>
+</div>
+
+<script>
+const SCORECARD_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxdmgesJRyenRcIKQrBzKkxIfmTufDyyY9hBl8WyPrifjXnm3BTcK5MR4OtqtQHTk0TBA/exec';
+
+const QUESTIONS = [
+  { cat: 'Delivery', text: 'Do your customers ask for new features faster than you can deliver them?', flagOn: true, title: 'Delivery capacity', tip: 'Your roadmap is outrunning your team. A clear priority list and AI-assisted development can close the gap.' },
+  { cat: 'Customers', text: 'Does your team spend hours every week answering the same customer questions?', flagOn: true, title: 'Customer support', tip: 'An AI assistant trained on your help docs can draft answers and cut support time.' },
+  { cat: 'Customers', text: 'Do new customers need a lot of hand-holding to get started?', flagOn: true, title: 'Onboarding', tip: 'Guided in-app onboarding and AI help can let customers get started on their own.' },
+  { cat: 'Operations', text: 'Is information copied by hand between systems?', flagOn: true, title: 'Manual work', tip: 'Connecting your systems removes double handling and costly mistakes.' },
+  { cat: 'AI', text: 'Have customers or competitors mentioned AI features?', flagOn: true, title: 'AI expectations', tip: 'Your market is asking for AI. A short plan for 1–2 practical features keeps you ahead.' },
+  { cat: 'AI', text: 'Do you know what AI would actually cost to add to your product?', flagOn: false, title: 'AI costs', tip: 'A rough cost for the right AI features lets you plan and budget with confidence.' },
+  { cat: 'Team', text: 'Does one person hold most of the knowledge about how your product works?', flagOn: true, title: 'Key-person risk', tip: 'Documenting your product and sharing knowledge protects you if someone leaves.' },
+  { cat: 'Delivery', text: 'Do updates often take longer than promised?', flagOn: true, title: 'Predictability', tip: 'A steady release rhythm with clear scope makes updates something you can promise.' },
+  { cat: 'Quality', text: 'Do problems usually reach customers before your team spots them?', flagOn: true, title: 'Quality checks', tip: 'Automated checks and senior review catch issues before your customers do.' },
+  { cat: 'AI', text: 'If you added AI tomorrow, do you know who would lead it?', flagOn: false, title: 'AI leadership', tip: 'AI work needs one accountable lead who understands your product.' }
+];
+
+let idx = 0;
+let answers = [];
+const $ = (id) => document.getElementById(id);
+
+function show(id) {
+  ['intro', 'question', 'details', 'result'].forEach((s) => $(s).classList.toggle('hidden', s !== id));
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function renderQuestion() {
+  const q = QUESTIONS[idx];
+  $('q-progress').textContent = 'Question ' + (idx + 1) + ' of ' + QUESTIONS.length;
+  $('q-cat').textContent = q.cat;
+  $('q-bar').style.width = Math.round(((idx + 1) / QUESTIONS.length) * 100) + '%';
+  $('q-text').textContent = q.text;
+}
+
+function answer(v) {
+  answers[idx] = v;
+  if (idx < QUESTIONS.length - 1) { idx++; renderQuestion(); }
+  else { show('details'); $('f-name').focus(); }
+}
+
+function computeResult() {
+  const flagged = QUESTIONS.filter((q, i) => answers[i] === q.flagOn);
+  const readiness = Math.round(((QUESTIONS.length - flagged.length) / QUESTIONS.length) * 100);
+  let band = { title: 'Leaving time and money on the table', color: '#B91C1C', bg: '#FEE2E2', dial: '#DC2626',
+    message: 'There are several areas costing you time and money right now. The good news: most of them are very fixable, and a few quick wins can make a big difference.' };
+  if (readiness >= 70) band = { title: 'Ahead of the curve', color: '#15803D', bg: '#DCFCE7', dial: '#16A34A',
+    message: "You're in good shape. Keep an eye on the areas below, and look at where AI could give your customers something new." };
+  else if (readiness >= 40) band = { title: 'Room to grow', color: '#B45309', bg: '#FEF3C7', dial: '#F59E0B',
+    message: 'A few focused changes could save your team real time each week and make your product easier to grow.' };
+
+  const cats = [];
+  QUESTIONS.forEach((q, i) => {
+    let c = cats.find((x) => x.name === q.cat);
+    if (!c) { c = { name: q.cat, total: 0, flagged: 0 }; cats.push(c); }
+    c.total++;
+    if (answers[i] === q.flagOn) c.flagged++;
+  });
+  let top = null;
+  cats.forEach((c) => { if (c.flagged > 0 && (!top || c.flagged / c.total > top.flagged / top.total)) top = c; });
+  const strong = cats.filter((c) => c.flagged === 0).map((c) => c.name);
+  const summary = [
+    ['Your score', readiness + '% (' + band.title + '). ' + flagged.length + ' of ' + QUESTIONS.length + ' answers point to something worth fixing.'],
+    ['Biggest opportunity', top ? top.name + ': ' + top.flagged + ' of ' + top.total + ' answers in this area need attention.' : 'Nothing major stood out.'],
+    ['Going well', strong.length ? strong.join(', ') + '. No issues flagged here.' : 'Every area has at least one thing worth improving.'],
+    ['Best first step', flagged.length ? flagged[0].title + '. ' + flagged[0].tip : 'Pick 1 or 2 AI features your customers would love, and plan them properly.']
+  ];
+  return { flagged, readiness, band, summary };
+}
+
+function renderResult(r, firstName) {
+  const deg = Math.round(r.readiness * 3.6);
+  $('dial').style.background = 'conic-gradient(' + r.band.dial + ' 0deg ' + deg + 'deg, #E6EFF8 ' + deg + 'deg 360deg)';
+  $('r-score').textContent = r.readiness + '%';
+  $('r-band').textContent = r.band.title;
+  $('r-band').style.color = r.band.color;
+  $('r-band').style.background = r.band.bg;
+  $('r-greeting').textContent = 'Here are your results, ' + firstName;
+  $('r-message').textContent = r.band.message;
+
+  const sum = $('r-summary');
+  sum.innerHTML = '';
+  r.summary.forEach(([label, text]) => {
+    const row = document.createElement('div');
+    row.style.cssText = 'display:flex;flex-wrap:wrap;gap:6px 20px;padding:14px 0;border-top:1px solid #F1E3B0';
+    const a = document.createElement('span');
+    a.style.cssText = 'flex:0 0 190px;font-family:Inter,sans-serif;font-weight:700;font-size:15px';
+    a.textContent = label;
+    const b = document.createElement('span');
+    b.style.cssText = 'flex:1 1 360px;font-size:15px;line-height:1.6;color:#334155';
+    b.textContent = text;
+    row.append(a, b);
+    sum.append(row);
+  });
+
+  const focus = $('r-focus');
+  focus.innerHTML = '';
+  if (!r.flagged.length) {
+    const p = document.createElement('p');
+    p.style.cssText = 'margin:0;font-size:16px;line-height:1.6;color:#475569';
+    p.textContent = "Nothing urgent stood out. You're in great shape, so the next step is picking 1–2 AI features that would delight your customers.";
+    focus.append(p);
+  }
+  r.flagged.forEach((f) => {
+    const card = document.createElement('div');
+    card.style.cssText = 'flex:1 1 300px;border:1px solid #E2E8F0;border-radius:16px;padding:20px';
+    const t = document.createElement('div');
+    t.style.cssText = 'font-family:Inter,sans-serif;font-weight:700;font-size:16px;margin-bottom:4px';
+    t.textContent = f.title;
+    const d = document.createElement('div');
+    d.style.cssText = 'font-size:14px;line-height:1.55;color:#475569';
+    d.textContent = f.tip;
+    card.append(t, d);
+    focus.append(card);
+  });
+}
+
+async function submitScorecard(payload) {
+  try {
+    await fetch(SCORECARD_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(payload)
+    });
+  } catch (err) {
+    console.error('Scorecard save failed', err);
+  }
+}
+
+$('start').addEventListener('click', () => { idx = 0; answers = []; renderQuestion(); show('question'); });
+$('yes').addEventListener('click', () => answer(true));
+$('no').addEventListener('click', () => answer(false));
+$('q-back').addEventListener('click', () => { if (idx > 0) { idx--; renderQuestion(); } else show('intro'); });
+$('d-back').addEventListener('click', () => { idx = QUESTIONS.length - 1; renderQuestion(); show('question'); });
+['f-name', 'f-email', 'f-company'].forEach((id) => $(id).addEventListener('input', () => $('f-error').classList.add('hidden')));
+$('restart').addEventListener('click', () => show('intro'));
+
+$('submit').addEventListener('click', async () => {
+  const firstName = $('f-name').value.trim();
+  const email = $('f-email').value.trim();
+  const company = $('f-company').value.trim();
+  if (!firstName || !/.+@.+\..+/.test(email)) {
+    $('f-error').textContent = 'Please add your first name and a valid email.';
+    $('f-error').classList.remove('hidden');
+    return;
+  }
+  const btn = $('submit');
+  btn.disabled = true;
+  btn.textContent = 'Getting your results...';
+  const r = computeResult();
+  await submitScorecard({
+    firstName, email, company,
+    readiness: r.readiness,
+    band: r.band.title,
+    flagged: r.flagged.map((f) => ({ title: f.title, tip: f.tip })),
+    answers,
+    website: $('f-website').value
+  });
+  btn.disabled = false;
+  btn.textContent = 'See my results';
+  renderResult(r, firstName.split(' ')[0]);
+  show('result');
+});
+</script>
+</body>
+</html>
